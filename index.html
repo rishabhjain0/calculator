@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculator</title>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,  initial-scale=1">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="file:///M:/calculator_js/function.js"></script>
+ 
+
+  <style type="text/css">
+
+  	.container-flud{
+  		width: 37%;
+  		height: 30rem;
+  		background-color: #1b262c;
+  		margin-top: 10%;
+
+
+  	}
+  	.btn{
+  		color: #0f4c75;
+  		background-color: #bbe1fa;
+  	}
+  	.btnl{
+  		padding: 3% 50%;
+  		margin-left: -10%;
+		}
+	.btnac{
+  		padding: 3% 42%;
+  		margin-left: -10%;
+		}
+	.btnlm{
+  		padding: 3% 47%;
+  		margin-left: -10%;
+		}
+	.btnlo{
+  		padding: 3% 49%;
+  		margin-left: -10%;
+		}
+		.btnlo{
+  		padding: 3% 49%;
+  		margin-left: -10%;
+		}
+	.button-clear{
+		padding: 3% 37%;
+		margin-left: -8%;
+
+
+	}	
+	.button-zero{
+		padding-top: 3%;
+		padding-bottom: 3%;
+		padding-left: 50%;
+		padding-right: 50%;
+		margin-left: -8%;
+
+	}	
+	.button-point{
+		padding-top: 3%;
+		padding-bottom: 3%;
+		padding-left: 50%;
+		padding-right: 53%;
+		margin-left: -7%;
+
+	}	
+.div-contain{
+	
+}
+.row{
+	padding-bottom: 2%;
+
+}
+.result{
+	width: 100%;
+	height: 15rem;
+}
+#write,#write2{
+	color: white;
+}
+@media screen and (max-width: 768px) and (min-width: )
+{
+	.btnl{
+  		padding: 3% 52%;
+  		margin-left: 0%;
+  		margin-left: -10%;
+		}
+	.btnac{
+  		padding: 3% 35%;
+  		margin-left: 0%;
+  		margin-left: -10%;
+		}
+	.btnlm{
+  		padding: 3% 47%;
+  		margin-left: 0%;
+  		margin-left: -10%;
+		}
+	.btnlo{
+  		padding: 3% 49%;
+  		margin-left: 0%;
+  		margin-left: -10%;
+		}
+		.btnlo{
+  		padding: 3% 49%;
+  		margin-left: 0%;
+  		margin-left: -10%;
+		}
+	.button-clear{
+		padding: 3% 25%;
+		margin-left: -10%;
+
+	}	
+	.button-zero{
+		padding-top: 3%;
+		padding-bottom: 3%;
+		padding-left: 50%;
+		padding-right: 50%;
+		margin-left: -10%;
+
+	}	
+	.button-point{
+		padding-top: 3%;
+		padding-bottom: 3%;
+		padding-left: 50%;
+		padding-right: 60%;
+		margin-left: -10%;
+
+	}	
+
+}
+ 
+  </style>
+  	
+</head>
+<body>
+	<section id="calc">
+		<div class="container-fluid container-flud">
+			<div class="container-fluid result">
+				
+				<h3 id="write"></h3>
+				<h5 id="write2"></h5>
+			</div>
+			<div class="container-fluid div-contain">
+				<div class="row">
+					<div class="col-3">
+						<button class="btn btn-lg btn-secondary btnac" onclick="
+						ac()">AC</button>
+					</div>
+					<div class="col-3">
+						<button class="btn btn-lg btn-secondary btnlo" onclick="equali()">=</button>
+					</div>
+					<div class="col-3">
+						<button class="btn btn-lg btn-secondary btnlm" onclick="per()">%</button>
+					</div>
+					<div class="col-3">
+						<button class="btn btn-lg btn-secondary btnl" onclick="divi()">/</button>
+					</div>
+				</div>
+
+
+				<div class="row">
+					<div class="col-3">
+						<button class="btn btn-lg btn-secondary btnl" onclick="seven()">7</button>
+					</div>
+					<div class="col-3">
+						<button class="btn btn-lg btn-secondary btnl" onclick="eight()">8</button>
+					</div>
+					<div class="col-3">
+						<button class="btn btn-lg btn-secondary btnl" onclick="nine()">9</button>
+					</div>
+					<div class="col-3">
+						<button class="btn btn-lg btn-secondary btnl" onclick="mul()">*</button>
+					</div>
+				</div>
+
+
+				<div class="row">
+					<div class="col-3">
+						<button class="btn btn-lg btn-secondary btnl" onclick="four()">4</button>
+					</div>
+					<div class="col-3">
+						<button class="btn btn-lg btn-secondary btnl" onclick="five()">5</button>
+					</div>
+					<div class="col-3">
+						<button class="btn btn-lg btn-secondary btnl" onclick="six()">6</button>
+					</div>
+					<div class="col-3">
+						<button class="btn btn-lg btn-secondary btnl" onclick="sub()">-</button>
+					</div>
+				</div>
+
+
+				<div class="row">
+					<div class="col-3">
+						<button class="btn btn-lg btn-secondary btnl" onclick="three()">3</button>
+					</div>
+					<div class="col-3">
+						<button class="btn btn-lg btn-secondary btnl" onclick="two()">2</button>
+					</div>
+					<div class="col-3">
+						<button class="btn btn-lg btn-secondary btnl" onclick="one()">1</button>
+					</div>
+					<div class="col-3">
+						<button class="btn btn-lg btn-secondary btnlm" onclick="add()">+</button>
+					</div>
+				</div>
+
+
+				<div class="row">
+					<div class="col-4">
+						<button class="btn btn-lg btn-secondary button-point" onclick="point()">.</button>
+					</div>
+					<div class="col-4">
+						<button class="btn btn-lg btn-secondary button-zero " onclick="zero()">0</button>
+					</div>
+					<div class="col-4">
+						<button class="btn btn-lg btn-secondary button-clear" onclick="clea()">clear</button>
+					</div>
+				</div>
+			</div>
+
+		</div>	
+
+  			
+
+		 
+
+	</section>
+
+	 
+
+
+</body>
+</html>
